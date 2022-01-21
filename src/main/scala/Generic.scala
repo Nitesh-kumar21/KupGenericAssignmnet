@@ -25,7 +25,7 @@ class Generic extends Stack[Int] {
 
   override def popElement(): Int = {
     if (stack.isEmpty) {
-      println("oops.. Stack is Empty")
+//      println("oops.. Stack is Empty")
 
       error("oops.. Stack is Empty")
     }

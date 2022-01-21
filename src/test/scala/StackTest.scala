@@ -20,8 +20,9 @@ class StackTest extends AnyFlatSpec {
     assert(obj.topElement == 3)
   }
   "Stack" should "be empty if all element are popped " in {
-    obj.pushElement(2)
-    obj.popElement()
-    assert(obj.isEmpty)
+   val newStack = new Generic
+   newStack.pushElement(2)
+    newStack.popElement()
+    assert(newStack.isEmpty)
   }
 }
