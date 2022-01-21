@@ -2,7 +2,7 @@ import scala.sys.error
 
 trait Stack[Q] {
 
-  def pushElement(x: Q)
+  def pushElement(x: Q): Unit
 
   def topElement(): Q
 
@@ -19,14 +19,13 @@ class Generic extends Stack[Int] {
     println(stack)
   }
 
-  override def topElement: Int = {
+  override def topElement(): Int = {
     stack.head
   }
 
   override def popElement(): Int = {
     if (stack.isEmpty) {
-//      println("oops.. Stack is Empty")
-
+      //      println("oops.. Stack is Empty")
       error("oops.. Stack is Empty")
     }
     else {
